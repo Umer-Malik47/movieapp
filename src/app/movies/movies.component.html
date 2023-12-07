@@ -1,0 +1,32 @@
+<div class="d-flex justify-content-center align-items-center vh-100  " *ngIf="isLoading">
+    <div class="spinner-grow text-primary width" role="status" style="height: 110px;width: 110px;">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+
+<div class="container" *ngIf="!isLoading">
+    <form class="text-center">
+        <h2>Movies series</h2>
+        <button class="btn btn-outline-success me-2" type="button" (click)="filtermoviedata('popular')">Popular</button>
+        <button class="btn btn-sm btn-outline-secondary m-2" type="button" (click)="filtermoviedata('top_rated')">Top
+            rated</button>
+        <button class="btn btn-sm btn-outline-secondary m-2" type="button"
+            (click)="filtermoviedata('upcoming')">Upcoming</button>
+        <button class="btn btn-sm btn-outline-secondary m-2" type="button" (click)="filtermoviedata('now_playing')">Now
+            playing</button>
+    </form>
+    <div class="row justify-content-center" *ngIf="movies">
+        <div class="card m-1 height-400" style="width: 18rem;" *ngFor="let movie of movies.results">
+            <img *ngIf="movie.poster_path; else placeholder" src="https://image.tmdb.org/t/p/w200/{{movie.poster_path}}"
+                alt="...">
+            <ng-template #placeholder>
+                <img src="https://fakeimg.pl/300x400" class="card-img-top img-thumbnail" alt="Placeholder">
+            </ng-template>
+            <div class="card-body">
+                <h5 class="card-title">{{movie.title}}</h5>
+                <p class="card-text">{{movie.release_date}}</p>
+            </div>
+            <a [routerLink]="['/moviedetails',movie.id]" class="btn btn-outline-primary">Movie details</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,95 @@
+<div class="d-flex justify-content-center align-items-center vh-100 " *ngIf="isLoading">
+  <div class="spinner-grow text-primary width" role="status" style="height: 110px;width: 110px;">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+<div class="container" *ngIf="!isLoading">
+  <div class="row">
+    <div class="col mt-5">
+      <h1 class="mt-5">U-Movies Webapp</h1>
+      <p>Welcome to U-Movies Webapp! Your ultimate destination for
+        exploring and discovering exciting movies.
+        Browse our vast collection of films, get detailed
+        information, and immerse yourself in
+        the world of cinema.</p>
+      <button type="button" class="btn btn-info" (click)="nivgtomovi()">Watch Now</button>
+    </div>
+    <div class="col">
+      <img src="assets/movieimg.png" class="img-fluid" alt="">
+    </div>
+  </div>
+  <div class="row mt-5 ">
+    <div class="col mt-5">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
+              Laptop movie app experience
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Laptop movie app experience.</strong> Experience the best of our movie app on your laptop! Browse
+              through a vast collection of movies, view detailed information, watch trailers, and even read reviews from
+              other users. Our responsive design ensures that you get a seamless and immersive movie-watching experience
+              on your laptop screen
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Mobile movie app experience
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Mobile movie app experience.</strong> Take your movie app experience on the go with our mobile
+              version! Discover movies, check showtimes, and easily book tickets right from your smartphone. The mobile
+              interface is designed to be intuitive and user-friendly, making it convenient to explore and enjoy movies
+              anytime, anywhere.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Tablet movie app experience
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Tablet movie app experience.</strong> Enjoy movies with the perfect balance of screen real estate
+              on your tablet. Our app adapts to the tablet form factor, providing you with an immersive movie browsing
+              experience. Whether you're using your tablet in portrait or landscape mode, our app ensures that you get
+              the most out of your tablet's display for an enhanced movie journey.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col mt-5">
+      <img src="assets/lcmtimg.png" class="img-fluid" alt="">
+    </div>
+  </div>
+  <div class="row footer mt-5 ">
+    <div class="col">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item text-center">More sites</li>
+        <li class="list-group-item">Youtube.com</li>
+        <li class="list-group-item">Facebook.com</li>
+        <li class="list-group-item">instagram.com</li>
+        <li class="list-group-item">Telegram.com</li>
+      </ul>
+    </div>
+    <div class="col">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Write your review" aria-label="Write your review" aria-describedby="button-addon2">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
